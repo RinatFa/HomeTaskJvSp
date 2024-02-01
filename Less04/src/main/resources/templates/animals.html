@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Animals</title>
+</head>
+<body>
+<h1>Животный мир</h1>
+<h2>Просмотр животных</h2>
+
+<table style="text-align: center;">
+    <tr>
+        <th>Вид животного</th>
+        <th>Возраст животного</th>
+    </tr>
+    <tr style="color:green;font-weight: bold;" th:each="a: ${animals}">
+        <td th:text="${a.type}"></td>
+        <td th:text="${a.age}"></td>
+    </tr>
+</table>
+
+<h2>Добавление животного</h2>
+<form action="/animals" method="post">
+    Type: <input type="text" name="type" style="border-color: green;"
+                 value="Кошка"><br>
+    Age: <input type="number" step="any" name="age" style="border-color: green;"
+                value="5"><br>
+    <button type="submit" style="border-color: green;">
+        Добавить животное<br> (по умолчанию: Кошка 5 лет)
+    </button>
+</form>
+</body>
+</html>

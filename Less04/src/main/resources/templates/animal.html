@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Животный мир</title>
+</head>
+<body>
+<h1>Животный мир</h1>
+<h2>Посмотрим на мир животных, например, на пингвинов</h2>
+<h3>Рост отдельных видов пингвинов:</h3>
+<ul style="font-weight: bold;">
+    <li>Самым большим из современных представителей является императорский пингвин</li>
+    рост <span style="color:green;" th:text=" ${hl}"></span> см,
+    рост в диапазоне <span th:text=" ${minGrowthLarge}"></span>-<span th:text=" ${maxGrowthLarge}"></span> см,<br>
+    масса до <span style="color:green;" th:text="${wl}"></span> кг
+    <li>Самые мелкие - представители вида Eudyptula minor - малый пингвин</li>
+    рост <span style="color:green;" th:text="${hs}"></span> см,
+    рост в диапазоне <span th:text=" ${minGrowthSmall}"></span>-<span th:text=" ${maxGrowthSmall}"></span> см,<br>
+    масса <span style="color:green;" th:text="${ws}"></span> кг,
+    масса в диапазоне <span th:text="${minWeightSmall}"></span>-<span th:text="${maxWeightSmall}"></span> кг<br>
+</ul>
+<p>Такие существенные различия объясняются правилом Бергмана,<br>
+    для которого пингвины являются частым примером.<br>
+    Правило Бергмана гласит, что животные, обитающие в холодных регионах,<br>
+    имеют бо́льшие размеры тела, поскольку это способствует более рациональному<br>
+    соотношению объёма и поверхности тела животного и тем самым - уменьшению теплопотери.</p>
+</body>
+</html>
