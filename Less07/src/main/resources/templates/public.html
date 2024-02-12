@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница для всех</title>
+</head>
+<body>
+<div align="center" style="color:green;">
+    <div>
+        <h2>Страница для пользователей (user) и<br> администраторов (admin)!</h2>
+        <a th:href="@{/private-data}">Страница для администраторов (admin)</a>
+    </div>
+    <div><p></p></div>
+    <div>
+        <a th:href="@{/login}">Выйти</a>
+    </div>
+    <div><p><br></p></div>
+    <div>
+        <p>Кто вошел на страницу? - Spring Roles:
+            <span sec:authentication="principal.authorities">
+					NOT FOUND</span></p>
+    </div>
+</div>
+</body>
+</html>

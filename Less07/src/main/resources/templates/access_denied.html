@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Доступ запрещен</title>
+</head>
+<body>
+<div align="center">
+    <div style="color:red;">
+        <h2>Доступ пользователям (user) запрещен!</h2>
+        <a th:href="@{/login}">Выйти</a>
+    </div>
+    <div><p><br></p></div>
+    <div style="color:magenta;">
+        <p>Кто вошел на страницу? - Spring Roles:
+            <span sec:authentication="principal.authorities">
+					NOT FOUND</span></p>
+    </div>
+</div>
+</body>
+</html>
